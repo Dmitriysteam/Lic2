@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лицей №2 — Иркутск</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#07111f;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top left,#12325e55,transparent 30%),
+radial-gradient(circle at bottom right,#1e6db755,transparent 25%),
+linear-gradient(180deg,#07111f,#081726,#0b1d2e);
+z-index:-2;
+}
+
+header{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-image{
+position:absolute;
+inset:0;
+background:
+linear-gradient(to bottom,rgba(4,10,18,0.6),rgba(4,10,18,0.95)),
+url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1800&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:72px;
+font-weight:800;
+margin-bottom:25px;
+line-height:1.05;
+background:linear-gradient(90deg,#ffffff,#8ec8ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+font-size:22px;
+line-height:1.7;
+color:#d7e9ff;
+}
+
+section{
+padding:120px 8%;
+}
+
+.section-title{
+font-size:52px;
+margin-bottom:25px;
+font-weight:800;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border-radius:28px;
+overflow:hidden;
+transition:0.5s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.card-content{
+padding:28px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:24px;
+}
+
+.slot-wrapper{
+margin-top:70px;
+background:rgba(255,255,255,0.04);
+border-radius:35px;
+padding:40px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.balance{
+font-size:28px;
+margin-bottom:30px;
+color:#9bd0ff;
+}
+
+.bet-controls{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.bet-controls input{
+flex:1;
+min-width:200px;
+padding:18px;
+border-radius:18px;
+border:none;
+background:#0c1c2d;
+color:white;
+font-size:18px;
+}
+
+.bet-controls button{
+padding:18px 35px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#1f7cff,#57c7ff);
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+.slot-machine{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.reel{
+width:140px;
+height:160px;
+border-radius:25px;
+background:linear-gradient(145deg,#10243b,#132f4f);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:70px;
+}
+
+.result{
+margin-top:30px;
+text-align:center;
+font-size:24px;
+}
+
+footer{
+padding:50px;
+text-align:center;
+color:#91b5da;
+border-top:1px solid rgba(255,255,255,0.08);
+margin-top:100px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="hero-image"></div>
+
+<div class="hero-content">
+<h1>Лицей №2<br>города Иркутска</h1>
+
+<p>
+Современное образовательное пространство,
+ориентированное на IT, математику и развитие учеников.
+</p>
+</div>
+</header>
+
+<section>
+<h2 class="section-title">Направления обучения</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Физико-математический профиль</h3>
+<p>Углубленное изучение точных наук и олимпиадная подготовка.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Информационные технологии</h3>
+<p>Программирование, алгоритмы и современные цифровые технологии.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop">
+<div class="card-content">
+<h3>Социально-экономическое направление</h3>
+<p>Подготовка в области аналитики, экономики и общественных наук.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Галерея</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop">
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Мини-игра</h2>
+
+<div class="slot-wrapper">
+<div class="balance">Баланс: <span id="balance">1000</span> ₽</div>
+
+<div class="bet-controls">
+<input type="number" id="bet" placeholder="Введите ставку">
+<button onclick="spin()">Крутить барабан</button>
+</div>
+
+<div class="slot-machine">
+<div class="reel" id="r1">🂡</div>
+<div class="reel" id="r2">🂱</div>
+<div class="reel" id="r3">🃁</div>
+</div>
+
+<div class="result" id="result"></div>
+</div>
+</section>
+
+<footer>
+Лицей №2 • Иркутск
+</footer>
+
+<script>
+const cards = ['🂡','🂱','🃁','🃑','🂮','🂭','🃞','🃝'];
+
+let balance = 1000;
+
+function randomCard(){
+return cards[Math.floor(Math.random()*cards.length)];
+}
+
+function updateBalance(){
+document.getElementById('balance').innerHTML = Math.floor(balance);
+}
+
+function spin(){
+const bet = parseInt(document.getElementById('bet').value);
+const result = document.getElementById('result');
+
+if(isNaN(bet) || bet <= 0){
+result.innerHTML = 'Введите корректную ставку';
+return;
+}
+
+if(bet > balance){
+result.innerHTML = 'Недостаточно средств';
+return;
+}
+
+balance -= bet;
+updateBalance();
+
+const reels = [
+document.getElementById('r1'),
+document.getElementById('r2'),
+document.getElementById('r3')
+];
+
+let interval = setInterval(() => {
+reels.forEach(r => r.innerHTML = randomCard());
+},100);
+
+setTimeout(() => {
+clearInterval(interval);
+
+let finalCards;
+
+if(Math.random() <= 0.45){
+const lucky = randomCard();
+finalCards = [lucky,lucky,lucky];
+}else{
+finalCards = [randomCard(),randomCard(),randomCard()];
+while(finalCards[0] === finalCards[1] && finalCards[1] === finalCards[2]){
+finalCards = [randomCard(),randomCard(),randomCard()];
+}
+}
+
+reels[0].innerHTML = finalCards[0];
+reels[1].innerHTML = finalCards[1];
+reels[2].innerHTML = finalCards[2];
+
+if(finalCards[0] === finalCards[1] && finalCards[1] === finalCards[2]){
+let reward = bet * 2.5;
+balance += reward;
+result.innerHTML = `🎉 Вы выиграли ${reward} ₽`;
+}else{
+result.innerHTML = '😢 Неудача';
+}
+
+updateBalance();
+
+},2500);
+}
+</script>
+
+</body>
+</html>
